@@ -1,1 +1,5 @@
-@startumal
+@startuml  
+
+Class Mascota
+
+@enduml

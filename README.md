@@ -3,7 +3,7 @@
 
 ##Pelea
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png)
+![](https://i.pinimg.com/736x/4d/28/2d/4d282dd4733e216d2ebb1343b8237334.jpg)
 
 ##Diagrama
 
