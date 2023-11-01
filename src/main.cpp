@@ -8,43 +8,42 @@ int main(int argc, char const *argv[])
 
     Ventana v;
 
-    Dibujo d1(1,1,"escenario");
-    Dibujo d2(1,17,"zombie");
+    Dibujo d1(100, 1, "zombie");
+    Dibujo d2(1, 1, "planta");
     bool ejecucion = true;
     while (ejecucion)
     {
-        //ciclo de actualizacion
+        // ciclo de actualizacion
         v.Actualizar();
         int input = getch();
         switch (input)
         {
-            case 'q':
-                ejecucion = false;
-                break;
-            case 'd':
-                d1.AvanzarX(1);
-                break;
-            case 'a':
-                d1.RetrocederX(1);
-                break;
-            case 'w':
-                d1.RetrocederY(1); // Mueve hacia arriba en Y
-                break;
-            case 's':
-                d1.AvanzarY(1); // Mueve hacia abajo en Y
-                break;
+        case 'q':
+            ejecucion = false;
+            break;
+        case 'd':
+            d1.AvanzarX(1);
+            break;
+        case 'a':
+            d1.RetrocederX(1);
+            break;
+        case 'w':
+            d1.RetrocederY(1); // Mueve hacia arriba en Y
+            break;
+        case 's':
+            d1.AvanzarY(1); // Mueve hacia abajo en Y
+            break;
         }
-        //ciclo de dibujo
+        // ciclo de dibujo
         clear();
         d2.Dibujar();
         d1.Dibujar();
-        
-        //v.Dibujar();
+
+        // v.Dibujar();
 
         refresh();
-        usleep(41000); //24 fps
+        usleep(41000); // 24 fps
     }
 
     return 0;
 }
-

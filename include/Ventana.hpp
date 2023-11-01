@@ -12,13 +12,13 @@ private:
     int contador;
 
 public:
-    Ventana() 
+    Ventana()
     {
         initscr();
-        getmaxyx(stdscr,y,x); //screen-> src tamaño de la pantalla en x y y
+        getmaxyx(stdscr, y, x); // screen-> src tamaño de la pantalla en x y y
         this->ejecucion = false;
-        this->velocidad =10;
-        this->contador=20;
+        this->velocidad = 10;
+        this->contador = 20;
         curs_set(FALSE);
         cbreak();
         timeout(100);
@@ -26,21 +26,24 @@ public:
         keypad(stdscr, TRUE);
     }
 
-    void Actualizar(){
-    this->contador = this->contador=1;
-    if (this->contador == 0)
+    void Actualizar()
     {
-        this->Cerrar();
+        this->contador = this->contador = 1;
+        if (this->contador == 0)
+        {
+            this->Cerrar();
+        }
     }
-    
+    void Dibujar()
+    {
+        box(stdscr, 'E', 'L');
     }
-    void Dibujar(){
-        box(stdscr,'E','L');
-    }
-    void Cerrar(){
+    void Cerrar()
+    {
         this->ejecucion = false;
     }
-    ~Ventana() {
-           endwin();
+    ~Ventana()
+    {
+        endwin();
     }
 };
