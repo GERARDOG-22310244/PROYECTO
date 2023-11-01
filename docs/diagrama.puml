@@ -1,5 +1,185 @@
 @startuml  
 
-Class Mascota
+class Partida{
+    + Comenzar
+}
+
+class NombreJugador{
+    + Insertar
+}
+
+class NivelDificultad{
+    + Facil()
+    + Dificil()
+}
+
+Partida o-- NombreJugador
+Partida o-- NivelDificultad
+ 
+
+class Planta{
+    + Colocar()
+    + UsarSoles()
+}
+    class LanzaGuisantes
+    class Girasol
+    class PetaCereza
+    class Nuez
+    class Patatum
+    class Hielaguisantes
+    class PlantaCarnivora
+    class Repetidora
+    class SetaDesesporada
+    class SetaSolar
+    class Humoseta
+    class ComePiedras
+    class Hipnoseta
+    class SetaMiedica
+    class PetaSeta
+    class Nenufar
+    class Apinsonaflor
+    class Tripitidora
+    class Zampalga
+    class Jalapeno
+    class PinchoHierba
+    class Plantorcha
+    class NuezGigante
+    class Marseta
+    class Planterna
+    class Trebolador
+    class Bipetidora
+    class Frustrella
+    class Calabaza
+    class Magnetoseta
+    class Coltapulta
+    class Maceta
+    class LanzaMaiz
+    class GranoDeCafe
+    class Ajo
+    class ParaPlanta
+    class Margarita
+    class Melonpulta
+
+class Zombie{
+    + CaminarIzq()
+    + AparecerAleatorio()
+    + ComerPlanta()
+}
+    class Normal
+    class Abanderado
+    class CaraCono
+    class Saltador
+    class CaraCubo
+    class Lector
+    class Portero
+    class Deportista
+    class Extra 
+    class Playero
+    class Buzo
+    class Conductor
+    class Bobsleigh
+    class Delfin 
+    class Cajita
+    class Globo
+    class Picado
+    class Saltarin
+    class Yeti
+    class Colgado
+    class Escalador 
+    class ZombiePulta
+    class Zombistein
+    class Zombidito
+    class DrZombie
+
+class Sol{
+    + Acumular()
+    + InvocarPlanta()
+}
+class Pala {
+    + QuitarPlanta()
+}
+class Podadora{
+    + AvanzarDer()
+    + ArrollarZombie()
+}
+class Personaje{
+    + Atacar()
+} 
+
+Planta o-- Sol
+Zombie o-- Planta
+Planta o-- Zombie
+Pala o-- Planta
+Podadora o-- Zombie
+Planta --|> Personaje
+Zombie --|> Personaje
+Podadora --|> Personaje
+
+
+LanzaGuisantes --|> Planta
+Girasol --|> Planta
+PetaCereza --|> Planta
+Nuez --|> Planta
+Patatum --|> Planta
+Hielaguisantes --|> Planta
+PlantaCarnivora --|> Planta
+Repetidora --|> Planta
+SetaDesesporada --|> Planta
+SetaSolar --|> Planta
+Humoseta --|> Planta
+ComePiedras --|> Planta
+Hipnoseta --|> Planta
+SetaMiedica --|> Planta
+PetaSeta --|> Planta
+Nenufar --|> Planta
+Apinsonaflor --|> Planta
+Tripitidora --|> Planta
+Zampalga --|> Planta
+Jalapeno --|> Planta
+PinchoHierba --|> Planta
+Plantorcha --|> Planta
+NuezGigante --|> Planta
+Marseta --|> Planta
+Planterna --|> Planta
+Trebolador --|> Planta
+Bipetidora --|> Planta
+Frustrella --|> Planta
+Calabaza --|> Planta
+Magnetoseta --|> Planta
+Coltapulta --|> Planta
+Maceta --|> Planta
+LanzaMaiz --|> Planta
+GranoDeCafe --|> Planta
+Ajo --|> Planta
+ParaPlanta --|> Planta
+Margarita --|> Planta
+Melonpulta --|> Planta
+
+
+Normal --|> Zombie
+Abanderado --|> Zombie
+CaraCono --|> Zombie 
+Saltador --|> Zombie
+CaraCubo --|> Zombie
+Lector --|> Zombie
+Portero --|> Zombie
+Deportista --|> Zombie
+extra --|> Zombie
+Playero --|> Zombie
+Buzo --|> Zombie
+Conductor --|> Zombie
+Bobsleigh --|> Zombie
+Delfin --|> Zombie
+Cajita --|> Zombie
+Globo --|> Zombie
+Picado --|> Zombie
+Saltarin --|> Zombie
+Yeti --|> Zombie
+Colgado --|> Zombie
+Escalador --|> Zombie
+ZombiePulta --|> Zombie 
+Zombistein --|> Zombie
+Zombidito --|> Zombie
+DrZombie --|> Zombie
 
 @enduml
